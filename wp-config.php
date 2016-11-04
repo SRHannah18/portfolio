@@ -20,7 +20,29 @@ define('WP_MEMORY_LIMIT', '64M');
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+
+
+/********************************************************************Adding hosting conditional***************************************/
+
+
+
+if ( $_SERVER['SERVER_NAME'] === 'sethhannah.com'){
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'sethhann_portfolio');
+	/** MySQL database username */
+	define('DB_USER', 'sethhann');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'AlkalineQuartet7!');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+	/** Database Charset to use in creating database tables. */
+	define('DB_CHARSET', 'utf8');
+	/** The Database Collate type. Don't change this if in doubt. */
+	define('DB_COLLATE', '');
+
+}else{
+	// ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'portfolio');
 
@@ -38,6 +60,14 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+}
+
+
+
+
+
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
